@@ -1,0 +1,126 @@
+/*Evitamos el Resaltado Azul de los Moviles*/
+* {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  user-select: none;         /* Evita seleccionar texto al tocar */
+  -webkit-user-select: none; /* Para Safari/iOS */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+
+/* Mesa */
+.soporte {
+  width: 370px;
+  left: -6px;
+}
+
+.soporte::before {
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 18px;
+}
+
+.soporte::after {
+  width: 95px;
+  left: 85px;
+}
+
+/*Mensaje*/
+.happy-birthday {
+  top: calc(-100% - 54px - var(--subida-letrero));
+  left: 120px;
+}
+
+/*Objetos de la mesa*/
+.portaretrato {
+  transform: scale(0.75);
+  left: 65px;
+  bottom: -12px;
+}
+
+.torta {
+  transform: scale(0.75);
+  left: 15px;
+  bottom: -20px;
+}
+
+.adorno-kitty {
+  left: 152px;
+  bottom: calc(-5px + var(--subida-kitty));
+  height: 270px;
+  clip-path: inset(0 0 7px);
+}
+
+.caja {
+  transform: scale(0.75);
+  left: -65px;
+  bottom: -26px;
+}
+
+.vela {
+  transform: scale(0.75);
+  bottom: 94px;
+  left: 145px;
+}
+
+.llama {
+  bottom: 160px;
+  left: 138px;
+}
+
+/* Nuevo media query para pantallas más pequeñas */
+@media only screen and (max-width: 400px) {
+
+  .soporte {
+    width: 300px;
+  }
+
+  .soporte::after {
+    left: 45px;
+    top: 20px;
+  }
+
+  .happy-birthday {
+    font-size: 36px;
+    left: 130px; 
+  }
+
+  .portaretrato {
+    transform: scale(0.65);
+    left: 92px;
+    bottom: -16px;
+  }
+
+  .torta {
+    transform: scale(0.63);
+    left: 17px;
+    bottom: -27px;
+  }
+
+  .adorno-kitty {
+    left: 154px;
+    bottom: var(--subida-kitty);
+    height: 245px;
+    clip-path: none;
+  }
+
+  .caja {
+    transform: scale(0.65);
+    left: -100px;
+    bottom: -35px;
+  }
+
+  .vela {
+    transform: scale(0.65);
+    bottom: 74px;
+    left: 160px;
+  }
+
+  .llama {
+    bottom: 138px;
+    left: 153px;
+  }
+
+}
+
